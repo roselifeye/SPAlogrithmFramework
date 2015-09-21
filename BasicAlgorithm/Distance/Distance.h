@@ -57,6 +57,9 @@
  */
 + (double)MinkowskiDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray andParameter:(int)parameter;
 
+#pragma Advanced Distance.
+
+
 
 
 @end

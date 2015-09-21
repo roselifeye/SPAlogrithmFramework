@@ -39,7 +39,7 @@
     for(id number in array) {
         double valueOfNumber = [number doubleValue];
         double difference = valueOfNumber - mean;
-        sumOfSquaredDifferences += difference * difference;
+        sumOfSquaredDifferences += pow(difference, 2);
     }
     return sqrt(sumOfSquaredDifferences / [array count]);
 }

@@ -62,7 +62,7 @@
     for (int i = 0; i < [fArray count]; i++) {
         double firstValue = [[fArray objectAtIndex:i] doubleValue];
         double secondValue = [[sArray objectAtIndex:i] doubleValue];
-        sumDistance += pow((firstValue - secondValue), parameter);
+        sumDistance += pow(fabs(firstValue - secondValue), parameter);
     }
     
     //  This method is not very efficient, I will update it.
