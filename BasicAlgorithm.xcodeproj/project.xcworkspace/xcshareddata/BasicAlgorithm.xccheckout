@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2DDD59E3-15B2-4530-B9FE-16568FF16616</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5C8D3F1AD0F5235384FDA8BD270041C814ACDAB5</key>
+		<string>https://github.com/roselifeye/SPAlogrithmFramework.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BasicAlgorithm.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5C8D3F1AD0F5235384FDA8BD270041C814ACDAB5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/roselifeye/SPAlogrithmFramework.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5C8D3F1AD0F5235384FDA8BD270041C814ACDAB5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5C8D3F1AD0F5235384FDA8BD270041C814ACDAB5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BasicAlgorithm</string>
+		</dict>
+	</array>
+</dict>
+</plist>

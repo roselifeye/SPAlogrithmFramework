@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B17B9061BB04994003E090A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17B9051BB04994003E090A /* main.m */; };
 		8B17B9111BB04BC4003E090A /* Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17B9101BB04BC4003E090A /* Distance.m */; };
+		8B17B9141BB07A7B003E090A /* BasicMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17B9131BB07A7B003E090A /* BasicMath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		8B17B9051BB04994003E090A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B17B90F1BB04BC4003E090A /* Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Distance.h; path = Distance/Distance.h; sourceTree = "<group>"; };
 		8B17B9101BB04BC4003E090A /* Distance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Distance.m; path = Distance/Distance.m; sourceTree = "<group>"; };
+		8B17B9121BB07A7B003E090A /* BasicMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicMath.h; path = BasicMath/BasicMath.h; sourceTree = "<group>"; };
+		8B17B9131BB07A7B003E090A /* BasicMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicMath.m; path = BasicMath/BasicMath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				8B17B9051BB04994003E090A /* main.m */,
+				8B17B9121BB07A7B003E090A /* BasicMath.h */,
+				8B17B9131BB07A7B003E090A /* BasicMath.m */,
 				8B17B90F1BB04BC4003E090A /* Distance.h */,
 				8B17B9101BB04BC4003E090A /* Distance.m */,
 			);
@@ -125,6 +130,7 @@
 			files = (
 				8B17B9111BB04BC4003E090A /* Distance.m in Sources */,
 				8B17B9061BB04994003E090A /* main.m in Sources */,
+				8B17B9141BB07A7B003E090A /* BasicMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@
  *
  *  @return Distance.
  */
-+ (CGFloat)EuclideanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
++ (double)EuclideanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
 
 /**
  *  Also called CityBlock Distance
@@ -28,8 +28,8 @@
  *
  *  @return Distance.
  */
-+ (CGFloat)ManhattanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
++ (double)ManhattanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
 
-+ (CGFloat)ChebyshevDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
++ (double)ChebyshevDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
 
 @end

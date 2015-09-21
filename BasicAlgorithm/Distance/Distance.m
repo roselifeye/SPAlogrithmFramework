@@ -7,28 +7,19 @@
 //
 
 #import "Distance.h"
+#import "BasicMath.h"
 
 @implementation Distance
 
-+ (BOOL)arrayLengthIsEqualWithFirstArray:(NSArray *)firstArray andSecondArray:(NSArray *)secondArray {
-    BOOL isEqual = NO;
-    if ([firstArray count] == [secondArray count]) {
-        isEqual = YES;
-    } else {
-        NSLog(@"The Length of the Two Array is not the same, Please Check.");
-    }
-    return isEqual;
-}
-
-+ (CGFloat)EuclideanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
-    CGFloat distance = .0f;
-    if ([self arrayLengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
++ (double)EuclideanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
+    double distance = .0f;
+    if ([BasicMath LengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
         return 0;
     }
-    CGFloat sumDistance = .0f;
+    double sumDistance = .0f;
     for (int i = 0; i < [firstArray count]; i++) {
-        CGFloat firstValue = [[firstArray objectAtIndex:i] floatValue];
-        CGFloat secondValue = [[secondArray objectAtIndex:i] floatValue];
+        double firstValue = [[firstArray objectAtIndex:i] doubleValue];
+        double secondValue = [[secondArray objectAtIndex:i] doubleValue];
         sumDistance += powf((firstValue - secondValue), 2);
     }
     distance = sqrtf(sumDistance);
@@ -36,27 +27,27 @@
     return distance;
 }
 
-+ (CGFloat)ManhattanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
-    CGFloat distance = 0.f;
-    if ([self arrayLengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
++ (double)ManhattanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
+    double distance = 0.f;
+    if ([BasicMath LengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
         return 0;
     }
     for (int i = 0; i < [firstArray count]; i++) {
-        CGFloat firstValue = [[firstArray objectAtIndex:i] floatValue];
-        CGFloat secondValue = [[secondArray objectAtIndex:i] floatValue];
+        double firstValue = [[firstArray objectAtIndex:i] doubleValue];
+        double secondValue = [[secondArray objectAtIndex:i] doubleValue];
         distance += fabs(firstValue - secondValue);
     }
     return distance;
 }
 
-+ (CGFloat)ChebyshevDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
-    CGFloat distance = 0.f;
-    if ([self arrayLengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
++ (double)ChebyshevDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
+    double distance = 0.f;
+    if ([BasicMath LengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
         return 0;
     }
     for (int i = 0; i < [firstArray count]; i++) {
-        CGFloat firstValue = [[firstArray objectAtIndex:i] floatValue];
-        CGFloat secondValue = [[secondArray objectAtIndex:i] floatValue];
+        double firstValue = [[firstArray objectAtIndex:i] doubleValue];
+        double secondValue = [[secondArray objectAtIndex:i] doubleValue];
         distance = MAX(distance, fabs(firstValue - secondValue));
     }
     return distance;
