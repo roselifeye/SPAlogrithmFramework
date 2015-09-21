@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0E8D931BB0B8E9005BA314 /* MatrixComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E8D921BB0B8E9005BA314 /* MatrixComputation.m */; settings = {ASSET_TAGS = (); }; };
 		8B17B9061BB04994003E090A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17B9051BB04994003E090A /* main.m */; };
 		8B17B9111BB04BC4003E090A /* Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17B9101BB04BC4003E090A /* Distance.m */; };
 		8B17B9141BB07A7B003E090A /* BasicMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17B9131BB07A7B003E090A /* BasicMath.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0E8D911BB0B8E9005BA314 /* MatrixComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatrixComputation.h; path = MatrixComputation/MatrixComputation.h; sourceTree = "<group>"; };
+		5B0E8D921BB0B8E9005BA314 /* MatrixComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatrixComputation.m; path = MatrixComputation/MatrixComputation.m; sourceTree = "<group>"; };
 		8B17B9021BB04994003E090A /* BasicAlgorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BasicAlgorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B17B9051BB04994003E090A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B17B90F1BB04BC4003E090A /* Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Distance.h; path = Distance/Distance.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				8B17B9131BB07A7B003E090A /* BasicMath.m */,
 				8B17B90F1BB04BC4003E090A /* Distance.h */,
 				8B17B9101BB04BC4003E090A /* Distance.m */,
+				5B0E8D911BB0B8E9005BA314 /* MatrixComputation.h */,
+				5B0E8D921BB0B8E9005BA314 /* MatrixComputation.m */,
 			);
 			path = BasicAlgorithm;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			files = (
 				8B17B9111BB04BC4003E090A /* Distance.m in Sources */,
 				8B17B9061BB04994003E090A /* main.m in Sources */,
+				5B0E8D931BB0B8E9005BA314 /* MatrixComputation.m in Sources */,
 				8B17B9141BB07A7B003E090A /* BasicMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +253,7 @@
 				8B17B90B1BB04994003E090A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

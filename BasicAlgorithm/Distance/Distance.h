@@ -30,6 +30,14 @@
  */
 + (double)ManhattanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
 
+/**
+ *  Chebyshev Distance
+ *
+ *  @param firstArray  The first vector
+ *  @param secondArray The second vector
+ *
+ *  @return Distance.
+ */
 + (double)ChebyshevDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
 
 @end

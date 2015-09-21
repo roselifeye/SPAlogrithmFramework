@@ -21,15 +21,19 @@
 }
 
 + (double)MeanOfArray:(NSArray *)array {
+    /*
     double sum = .0f;
     for(id number in array) {
         sum += [number doubleValue];
     }
-    
     return (sum / [array count]);
+     */
+    double average = 0.f;
+    average = [[array valueForKeyPath:@"@avg.doubleValue"] doubleValue];
+    return average;
 }
 
-+ (double)standardDeviationOf:(NSArray *)array {
++ (double)StandardDeviationOfArray:(NSArray *)array {
     double mean = [BasicMath MeanOfArray:array];
     double sumOfSquaredDifferences = .0f;
     for(id number in array) {
