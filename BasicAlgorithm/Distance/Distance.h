@@ -13,31 +13,50 @@
 /**
  *  Euclidean Distance
  *
- *  @param firstArray  The first vector
- *  @param secondArray The second vector
+ *  @param fArray  The first vector
+ *  @param sArray The second vector
  *
  *  @return Distance.
  */
-+ (double)EuclideanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
++ (double)EuclideanDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray;
 
 /**
  *  Also called CityBlock Distance
  *
- *  @param firstArray  The first vector
- *  @param secondArray The second vector
+ *  @param fArray  The first vector
+ *  @param sArray The second vector
  *
  *  @return Distance.
  */
-+ (double)ManhattanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
++ (double)ManhattanDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray;
 
 /**
  *  Chebyshev Distance
  *
- *  @param firstArray  The first vector
- *  @param secondArray The second vector
+ *  @param fArray  The first vector
+ *  @param sArray The second vector
  *
  *  @return Distance.
  */
-+ (double)ChebyshevDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray;
++ (double)ChebyshevDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray;
+
+/**
+ *  Minkowski Distance
+ *  Minkowski Distance is not a kind of distance,
+ *  it is kinds of distance.
+ *
+ *  When parameter P is equal to 1, it's Manhattan Distance.
+ *  When P is equal to 2, it's Euclidean Distance.
+ *  When P is equal to ∞, it's Chebyshev Distance.
+ *
+ *  @param fArray    The first vector
+ *  @param sArray    The second vector
+ *  @param parameter The variable parameter
+ *
+ *  @return Distance.
+ */
++ (double)MinkowskiDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray andParameter:(int)parameter;
+
+
 
 @end

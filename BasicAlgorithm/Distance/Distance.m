@@ -11,45 +11,62 @@
 
 @implementation Distance
 
-+ (double)EuclideanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
++ (double)EuclideanDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray {
     double distance = .0f;
-    if ([BasicMath LengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
+    if ([BasicMath LengthIsEqualWithFirstArray:fArray andSecondArray:sArray]) {
         return 0;
     }
     double sumDistance = .0f;
-    for (int i = 0; i < [firstArray count]; i++) {
-        double firstValue = [[firstArray objectAtIndex:i] doubleValue];
-        double secondValue = [[secondArray objectAtIndex:i] doubleValue];
-        sumDistance += powf((firstValue - secondValue), 2);
+    for (int i = 0; i < [fArray count]; i++) {
+        double firstValue = [[fArray objectAtIndex:i] doubleValue];
+        double secondValue = [[sArray objectAtIndex:i] doubleValue];
+        sumDistance += pow((firstValue - secondValue), 2);
     }
-    distance = sqrtf(sumDistance);
+    distance = sqrt(sumDistance);
     
     return distance;
 }
 
-+ (double)ManhattanDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
++ (double)ManhattanDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray {
     double distance = 0.f;
-    if ([BasicMath LengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
+    if ([BasicMath LengthIsEqualWithFirstArray:fArray andSecondArray:sArray]) {
         return 0;
     }
-    for (int i = 0; i < [firstArray count]; i++) {
-        double firstValue = [[firstArray objectAtIndex:i] doubleValue];
-        double secondValue = [[secondArray objectAtIndex:i] doubleValue];
+    for (int i = 0; i < [fArray count]; i++) {
+        double firstValue = [[fArray objectAtIndex:i] doubleValue];
+        double secondValue = [[sArray objectAtIndex:i] doubleValue];
         distance += fabs(firstValue - secondValue);
     }
     return distance;
 }
 
-+ (double)ChebyshevDistanceWithFirstArray:(NSArray *)firstArray toSecondArray:(NSArray *)secondArray {
++ (double)ChebyshevDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray {
     double distance = 0.f;
-    if ([BasicMath LengthIsEqualWithFirstArray:firstArray andSecondArray:secondArray]) {
+    if ([BasicMath LengthIsEqualWithFirstArray:fArray andSecondArray:sArray]) {
         return 0;
     }
-    for (int i = 0; i < [firstArray count]; i++) {
-        double firstValue = [[firstArray objectAtIndex:i] doubleValue];
-        double secondValue = [[secondArray objectAtIndex:i] doubleValue];
-        distance = MAX(distance, fabs(firstValue - secondValue));
+    for (int i = 0; i < [fArray count]; i++) {
+        double firstValue = [[fArray objectAtIndex:i] doubleValue];
+        double secondValue = [[sArray objectAtIndex:i] doubleValue];
+        distance = fmax(distance, fabs(firstValue - secondValue));
     }
+    return distance;
+}
+
++ (double)MinkowskiDistanceWithFirstArray:(NSArray *)fArray toSecondArray:(NSArray *)sArray andParameter:(int)parameter {
+    double distance = 0.f;
+    if ([BasicMath LengthIsEqualWithFirstArray:fArray andSecondArray:sArray]) {
+        return 0;
+    }
+    double sumDistance = .0f;
+    for (int i = 0; i < [fArray count]; i++) {
+        double firstValue = [[fArray objectAtIndex:i] doubleValue];
+        double secondValue = [[sArray objectAtIndex:i] doubleValue];
+        sumDistance += pow((firstValue - secondValue), parameter);
+    }
+    
+    //  This method is not very efficient, I will update it.
+    distance = pow(sumDistance, (double)(1.0/parameter));
     return distance;
 }
 
